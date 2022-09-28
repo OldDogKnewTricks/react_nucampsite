@@ -3,6 +3,9 @@ import chromeRiverImg from '../assets/img/chrome-river.jpg';
 import breadCrumbImg from '../assets/img/breadcrumb-trail.jpg';
 import reduxWoodsImg from '../assets/img/redux-woods.jpg';
 
+// import { Col, Row } from 'reactstrap';
+// import CampsiteCard from "./CampsiteCard";
+
 export const CAMPSITES = [
     {
         id: 0,
