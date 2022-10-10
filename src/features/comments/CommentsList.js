@@ -14,7 +14,8 @@ const CommentsList = ({ campsiteId }) => {
                     return <Comment key={comment.id} comment={comment} />;
                     
                 })}
-                 <CommentForm campsiteId={campsiteId} />
+                <CommentForm campsiteId={campsiteId}/>
+            
             </Col>
         );
     }
