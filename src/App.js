@@ -7,14 +7,17 @@ import Footer from './components/Footer';
 import CampsitesDirectoryPage from './pages/CampsitesDirectoryPage';
 import './App.css';
 import AboutPage from './pages/AboutPage';
-import {useEffect} from 'react';
-import {useDispatch} from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { fetchCampsites } from './features/campsites/campsitesSlice';
+import { fetchPartners } from './features/partners/partnersSlice';
 
 function App() {
     const dispatch = useDispatch();
+
     useEffect(() => {
         dispatch(fetchCampsites());
+        dispatch(fetchPartners());
     }, [dispatch]);
     return (
         <div className='App'>
@@ -24,7 +27,7 @@ function App() {
                 <Route path='contact' element={<ContactPage />} />
                 <Route path='directory' element={<CampsitesDirectoryPage />} />
                 <Route path='directory/:campsiteId' element={<CampsiteDetailPage />} />
-                <Route path='about' element={<AboutPage />}/>
+                <Route path='about' element={<AboutPage />} />
             </Routes>
             <Footer />
         </div>
