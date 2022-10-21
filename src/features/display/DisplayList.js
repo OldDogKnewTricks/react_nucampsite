@@ -18,9 +18,9 @@ const DisplayList = () => {
         <Row>
             {items.map((item, idx) => {
                 return (
-                    <Col md className='m-1' key={idx}>
+                    item && (<Col md className='m-1' key={idx}>
                         <AnimatedDisplayCard item={item} />
-                    </Col>
+                    </Col>)
                 );
             })}
         </Row>
